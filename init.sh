@@ -32,3 +32,8 @@ pnpm i -D lint-staged \
   && echo "    'git add'," >> .lintstagedrc.js \
   && echo "  ]," >> .lintstagedrc.js \
   && echo "};" >> .lintstagedrc.js
+
+# Install pre-commit-checks
+pnpm i -D git-precommit-checks \
+  && npx husky add .husky/pre-commit "npx --no-install git-pre-commit-checks" \
+  && touch git-precommit-checks.config.js
