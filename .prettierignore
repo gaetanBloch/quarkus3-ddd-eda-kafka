@@ -6,4 +6,4 @@ pnpm-lock.yaml
 gradle
 .gradle
 .idea
-devcontainer.json
+.devcontainer
