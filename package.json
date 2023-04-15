@@ -5,12 +5,14 @@
   "License": "Apache License, Version 2.0",
   "scripts": {
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --plugin @prettier/plugin-xml --plugin prettier-plugin-sh --write \"**/*.{sh, js,ts,css,scss,md,html,java,kotlin,xml,sql,json,package.json}\"",
+    "format:check": "prettier --plugin @prettier/plugin-xml --plugin prettier-plugin-sh --check \"**/*.{sh, js,ts,css,scss,md,html,java,kotlin,xml,sql,json,package.json}\""
   },
   "author": "gbloch",
   "devDependencies": {
     "@prettier/plugin-xml": "^2.2.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "prettier-plugin-java": "^2.1.0",
     "prettier-plugin-kotlin": "^2.1.0",

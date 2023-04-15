@@ -16,9 +16,6 @@ singleAttributePerLine: false
 # js and ts rules:
 arrowParens: avoid
 
-# xml rules:
-xmlWhitespaceSensitivity: ignore
-
 # Java rules:
 overrides:
   - files: "*.java"
