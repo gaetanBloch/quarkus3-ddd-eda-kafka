@@ -4,11 +4,13 @@
   "description": "",
   "License": "Apache License, Version 2.0",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "gbloch",
   "devDependencies": {
     "@prettier/plugin-xml": "^2.2.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.7",
     "prettier-plugin-java": "^2.1.0",
     "prettier-plugin-kotlin": "^2.1.0",

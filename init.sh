@@ -18,3 +18,7 @@ pnpm i
 # Install prettier
 pnpm i -D prettier prettier-plugin-java prettier-plugin-kotlin prettier-plugin-packagejson \
 prettier-plugin-sh prettier-plugin-sql @prettier/plugin-xml
+
+# Install husky
+pnpm i -D husky
+pnpm prepare
