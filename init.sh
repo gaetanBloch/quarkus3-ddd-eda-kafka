@@ -29,7 +29,6 @@ pnpm i -D lint-staged \
   && echo "module.exports = {" >> .lintstagedrc.js \
   && echo "  '*.{sh,js,jsx,ts,tsx,css,scss,md,html,java,kotlin,xml,sql,sh,json,package.json}': [" >> .lintstagedrc.js \
   && echo "    'prettier --plugin @prettier/plugin-xml --plugin prettier-plugin-sh  --write'," >> .lintstagedrc.js \
-  && echo "    'git add'," >> .lintstagedrc.js \
   && echo "  ]," >> .lintstagedrc.js \
   && echo "};" >> .lintstagedrc.js
 
@@ -37,3 +36,10 @@ pnpm i -D lint-staged \
 pnpm i -D git-precommit-checks \
   && npx husky add .husky/pre-commit "npx --no-install git-pre-commit-checks" \
   && touch git-precommit-checks.config.js
+
+# Install Commitlint
+pnpm i -D @commitlint/{config-conventional,cli} \
+  && npx husky add .husky/commit-msg "npx --no-install --no-config commitlint --edit \$1" \
+  && echo "module.exports = {" >> commitlint.config.js \
+  && echo "  extends: ['@commitlint/config-conventional']," >> commitlint.config.js \
+  && echo "};" >> commitlint.config.js
