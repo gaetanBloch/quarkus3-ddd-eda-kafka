@@ -1,0 +1,7 @@
+node_modules
+target
+build
+pnpm-lock.yaml
+.git
+gradle
+.gradle
