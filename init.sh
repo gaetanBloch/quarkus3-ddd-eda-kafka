@@ -43,3 +43,11 @@ pnpm i -D @commitlint/{config-conventional,cli} \
   && echo "module.exports = {" >> commitlint.config.js \
   && echo "  extends: ['@commitlint/config-conventional']," >> commitlint.config.js \
   && echo "};" >> commitlint.config.js
+
+# Install commitizen
+npm i -g commitizen
+pnpm i -D @commitlint/cz-commitlint commitizen --save-exac
+
+# Install validate-branch-name
+pnpm i -D validate-branch-name \
+  && npx husky add .husky/pre-push "npx --no-install validate-branch-name"
