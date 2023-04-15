@@ -14,3 +14,7 @@ pnpm config set store-dir ~/.pnpm-store && \
 rm -f node_modules && \
 rm -f package-lock.json && \
 pnpm i
+
+# Install prettier
+pnpm i -D prettier prettier-plugin-java prettier-plugin-kotlin prettier-plugin-packagejson \
+prettier-plugin-sh prettier-plugin-sql @prettier/plugin-xml
