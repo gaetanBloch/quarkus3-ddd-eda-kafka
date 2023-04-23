@@ -51,3 +51,6 @@ pnpm i -D @commitlint/cz-commitlint commitizen --save-exac
 # Install validate-branch-name
 pnpm i -D validate-branch-name \
   && npx husky add .husky/pre-push "npx --no-install validate-branch-name"
+
+# Init Gradle
+gradle init
